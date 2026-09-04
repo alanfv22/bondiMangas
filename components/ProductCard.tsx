@@ -28,13 +28,14 @@ export default function ProductCard({ producto }: { producto: Producto }) {
       </Link>
 
       <div className="flex flex-1 flex-col gap-2 p-3">
-        {/* Badges de tipo y disponibilidad, debajo de la portada. */}
-        <div className="flex flex-wrap items-center gap-1.5">
-          <span className="rounded-md bg-white/10 px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-bondi-textoSecundario">
+        {/* Badges de tipo y disponibilidad: siempre en una sola línea,
+            aunque la tarjeta sea angosta (2 columnas en mobile). */}
+        <div className="flex flex-nowrap items-center gap-1">
+          <span className="shrink-0 rounded-md bg-white/10 px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-bondi-textoSecundario">
             {producto.tipo}
           </span>
           {producto.porEncargue && (
-            <span className="rounded-md bg-bondi-rojoBadge px-2 py-0.5 text-[11px] font-bold uppercase tracking-wide text-white">
+            <span className="shrink-0 rounded-md bg-bondi-rojoBadge px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">
               Por encargue
             </span>
           )}
@@ -45,8 +46,6 @@ export default function ProductCard({ producto }: { producto: Producto }) {
             {producto.titulo}
           </h3>
         </Link>
-
-        <p className="text-xs text-bondi-textoSecundario">{producto.estado}</p>
 
         {/* Precio y botón con aire de sobra; en mobile el botón pasa a
             ocupar todo el ancho debajo del precio para que sea cómodo
