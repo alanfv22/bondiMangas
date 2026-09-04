@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Read(//c/Users/Alan Veron/Desktop/BondiComics/**)",
+      "Bash(npm view *)",
+      "Bash(mkdir -p .claude)",
+      "Bash(mv public/.claude/settings.json .claude/settings.json)",
+      "Bash(rmdir public/.claude)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\Alan Veron\\Desktop\\BondiComics"
+    ]
+  }
+}
