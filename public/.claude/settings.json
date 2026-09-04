@@ -46,12 +46,25 @@
       "Bash(curl -s -o /dev/null -w \"serie: %{http_code}\\\\n\" http://localhost:3000/serie/venom)",
       "Read(//c/Users/Alan Veron/Desktop/BondiComics/components/**)",
       "Bash(npx tsc *)",
-      "Bash(curl -s -o /dev/null -w \".claude sigue bloqueado: %{http_code}\\\\n\" http://localhost:3000/.claude/settings.json)"
+      "Bash(curl -s -o /dev/null -w \".claude sigue bloqueado: %{http_code}\\\\n\" http://localhost:3000/.claude/settings.json)",
+      "Read(//c/Program Files \\\\\\(x86\\\\\\)/Microsoft/Edge/Application/**)",
+      "Read(//c/Program Files/Google/Chrome/Application/**)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --hide-scrollbars --window-size=403,1200 --screenshot=mobile403.png \"http://localhost:3000/\")",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --hide-scrollbars --window-size=403,1400 --user-data-dir=\"C:\\\\Users\\\\ALANVE~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\chromeprof\" --screenshot=\"C:\\\\Users\\\\ALANVE~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Alan-Veron-Desktop-BondiComics-public\\\\02774c22-2509-413d-b63a-8e4391b4227b\\\\scratchpad\\\\mobile403.png\" \"http://localhost:3000/\")",
+      "Bash(node -e ' *)",
+      "Bash(npm init *)",
+      "Bash(npm i *)",
+      "Bash(node medir.mjs)",
+      "Bash(node captura.mjs)",
+      "Bash(node umbral.mjs)",
+      "Bash(node final.mjs)",
+      "Bash(node desktop.mjs)"
     ],
     "additionalDirectories": [
       "c:\\Users\\Alan Veron\\Desktop\\BondiComics",
       "c:\\Users\\Alan Veron\\Desktop\\BondiComics\\app",
-      "c:\\Users\\Alan Veron\\Desktop\\BondiComics\\components"
+      "c:\\Users\\Alan Veron\\Desktop\\BondiComics\\components",
+      "c:\\Users\\Alan Veron\\Desktop\\BondiComics\\app\\serie\\[serie]"
     ]
   }
 }

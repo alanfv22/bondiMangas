@@ -27,15 +27,17 @@ export default function ProductCard({ producto }: { producto: Producto }) {
         />
       </Link>
 
-      <div className="flex flex-1 flex-col gap-2 p-3">
-        {/* Badges de tipo y disponibilidad: siempre en una sola línea,
-            aunque la tarjeta sea angosta (2 columnas en mobile). */}
-        <div className="flex flex-nowrap items-center gap-1">
-          <span className="shrink-0 rounded-md bg-white/10 px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-bondi-textoSecundario">
+      <div className="flex flex-1 flex-col gap-1.5 p-2 sm:gap-2 sm:p-3">
+        {/* Badges de tipo y disponibilidad: entran en una sola línea desde
+            360px (el ancho mínimo de los celulares actuales). NO usamos
+            flex-nowrap a propósito: en pantallas más viejas (320px) bajan
+            de línea en vez de cortarse. */}
+        <div className="flex flex-wrap items-center gap-1">
+          <span className="whitespace-nowrap rounded bg-white/10 px-1 py-0.5 text-[10px] font-semibold uppercase text-bondi-textoSecundario sm:px-1.5 sm:tracking-wide">
             {producto.tipo}
           </span>
           {producto.porEncargue && (
-            <span className="shrink-0 rounded-md bg-bondi-rojoBadge px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">
+            <span className="whitespace-nowrap rounded bg-bondi-rojoBadge px-1 py-0.5 text-[10px] font-bold uppercase text-white sm:px-1.5">
               Por encargue
             </span>
           )}
@@ -47,17 +49,16 @@ export default function ProductCard({ producto }: { producto: Producto }) {
           </h3>
         </Link>
 
-        {/* Precio y botón con aire de sobra; en mobile el botón pasa a
-            ocupar todo el ancho debajo del precio para que sea cómodo
-            de tocar (no queda apretado contra el número). */}
-        <div className="mt-auto flex flex-col gap-2.5 pt-3">
-          <span className="text-lg font-bold text-bondi-texto">
+        {/* Precio y botón: el botón ocupa todo el ancho para que sea
+            cómodo de tocar y no quede apretado contra el precio. */}
+        <div className="mt-auto flex flex-col gap-2 pt-2 sm:gap-2.5 sm:pt-3">
+          <span className="text-base font-bold text-bondi-texto sm:text-lg">
             {formatearPrecio(producto.precio)}
           </span>
           <button
             type="button"
             onClick={() => agregarProducto(producto)}
-            className="min-h-11 w-full rounded-full bg-bondi-rojo px-4 py-2.5 text-sm font-bold text-white transition hover:brightness-110 active:scale-95"
+            className="min-h-11 w-full rounded-full bg-bondi-rojo px-3 py-2.5 text-sm font-bold text-white transition hover:brightness-110 active:scale-95"
           >
             Agregar
           </button>
