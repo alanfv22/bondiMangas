@@ -4,6 +4,7 @@ import "./globals.css";
 import { CarritoProvider } from "@/components/CarritoProvider";
 import CarritoDrawer from "@/components/CarritoDrawer";
 import Footer from "@/components/Footer";
+import { Analytics } from "@vercel/analytics/next";
 
 // Inter para texto de cuerpo (legible), Bebas Neue para títulos: da el aire
 // de tapa de comic/manga sin perder seriedad. Ambas se cargan como variables
@@ -34,6 +35,7 @@ export default function RootLayout({
           <Footer />
           <CarritoDrawer />
         </CarritoProvider>
+        <Analytics />
       </body>
     </html>
   );
