@@ -43,7 +43,10 @@
       "Bash(curl -s -o /dev/null -w \"home: %{http_code}\\\\n\" http://localhost:3000/)",
       "Bash(curl -s -o /dev/null -w \"app/page.js: %{http_code}\\\\n\" http://localhost:3000/_next/static/chunks/app/page.js)",
       "Bash(curl -s -o /dev/null -w \".claude blocked: %{http_code}\\\\n\" http://localhost:3000/.claude/settings.json)",
-      "Bash(curl -s -o /dev/null -w \"serie: %{http_code}\\\\n\" http://localhost:3000/serie/venom)"
+      "Bash(curl -s -o /dev/null -w \"serie: %{http_code}\\\\n\" http://localhost:3000/serie/venom)",
+      "Read(//c/Users/Alan Veron/Desktop/BondiComics/components/**)",
+      "Bash(npx tsc *)",
+      "Bash(curl -s -o /dev/null -w \".claude sigue bloqueado: %{http_code}\\\\n\" http://localhost:3000/.claude/settings.json)"
     ],
     "additionalDirectories": [
       "c:\\Users\\Alan Veron\\Desktop\\BondiComics",

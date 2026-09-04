@@ -34,7 +34,7 @@ export default function Footer() {
       </div>
 
       <p className="border-t border-white/5 py-4 text-center text-xs text-bondi-textoSecundario">
-        © {new Date().getFullYear()} BONDI. Demo local, sin pasarela de pago.
+        © {new Date().getFullYear()} BONDI. Todos los derechos reservados.
       </p>
     </footer>
   );

@@ -23,7 +23,7 @@ export default function Filtros({ demografias }: { demografias: string[] }) {
             key={opcion}
             type="button"
             onClick={() => setTipo(opcion)}
-            className={`min-h-10 rounded-full px-4 py-2 text-sm font-bold transition ${
+            className={`min-h-11 rounded-full px-4 py-2 text-sm font-bold transition ${
               tipo === opcion
                 ? "bg-bondi-rojo text-white"
                 : "bg-bondi-superficie text-bondi-textoSecundario hover:text-bondi-texto"
@@ -42,7 +42,7 @@ export default function Filtros({ demografias }: { demografias: string[] }) {
           id="filtro-demografia"
           value={demografia}
           onChange={(evento) => setDemografia(evento.target.value)}
-          className="min-h-10 rounded-lg border border-white/10 bg-bondi-superficie px-3 py-2 text-sm text-bondi-texto focus:border-bondi-rojo focus:outline-none"
+          className="min-h-11 rounded-lg border border-white/10 bg-bondi-superficie px-3 py-2 text-sm text-bondi-texto focus:border-bondi-rojo focus:outline-none"
         >
           <option value="Todas">Toda demografía</option>
           {demografias.map((valor) => (
@@ -61,7 +61,7 @@ export default function Filtros({ demografias }: { demografias: string[] }) {
           onChange={(evento) =>
             setDisponibilidad(evento.target.value as Disponibilidad)
           }
-          className="min-h-10 rounded-lg border border-white/10 bg-bondi-superficie px-3 py-2 text-sm text-bondi-texto focus:border-bondi-rojo focus:outline-none"
+          className="min-h-11 rounded-lg border border-white/10 bg-bondi-superficie px-3 py-2 text-sm text-bondi-texto focus:border-bondi-rojo focus:outline-none"
         >
           {DISPONIBILIDADES.map(({ valor, etiqueta }) => (
             <option key={valor} value={valor}>

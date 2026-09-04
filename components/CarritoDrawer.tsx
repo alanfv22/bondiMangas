@@ -35,7 +35,7 @@ export default function CarritoDrawer() {
           <button
             onClick={cerrarCarrito}
             aria-label="Cerrar carrito"
-            className="flex h-10 w-10 items-center justify-center rounded-full text-bondi-textoSecundario transition hover:bg-white/5 hover:text-white"
+            className="flex h-11 w-11 items-center justify-center rounded-full text-bondi-textoSecundario transition hover:bg-white/5 hover:text-white"
           >
             <IconoCerrar />
           </button>
@@ -68,10 +68,10 @@ export default function CarritoDrawer() {
                       {formatearPrecio(producto.precio)} c/u
                     </p>
 
-                    <div className="mt-1 flex items-center gap-1">
+                    <div className="mt-1 flex items-center gap-2">
                       <button
                         onClick={() => cambiarCantidad(producto.id, cantidad - 1)}
-                        className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-sm font-bold transition hover:bg-white/20 active:scale-95"
+                        className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-sm font-bold transition hover:bg-white/20 active:scale-95"
                         aria-label="Restar"
                       >
                         −
@@ -79,7 +79,7 @@ export default function CarritoDrawer() {
                       <span className="w-6 text-center text-sm">{cantidad}</span>
                       <button
                         onClick={() => cambiarCantidad(producto.id, cantidad + 1)}
-                        className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-sm font-bold transition hover:bg-white/20 active:scale-95"
+                        className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-sm font-bold transition hover:bg-white/20 active:scale-95"
                         aria-label="Sumar"
                       >
                         +
@@ -87,7 +87,7 @@ export default function CarritoDrawer() {
 
                       <button
                         onClick={() => quitarProducto(producto.id)}
-                        className="ml-auto flex h-8 items-center rounded-full px-2 text-xs font-semibold text-bondi-rojoTexto transition hover:bg-bondi-rojo/10"
+                        className="ml-auto flex h-11 items-center rounded-full px-3 text-xs font-semibold text-bondi-rojoTexto transition hover:bg-bondi-rojo/10"
                       >
                         Quitar
                       </button>
@@ -110,7 +110,7 @@ export default function CarritoDrawer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-disabled={items.length === 0}
-            className={`flex w-full items-center justify-center gap-2 rounded-full px-4 py-3 text-sm font-bold text-white transition ${
+            className={`flex min-h-12 w-full items-center justify-center gap-2 rounded-full px-4 py-3 text-sm font-bold text-white transition ${
               items.length === 0
                 ? "cursor-not-allowed bg-white/10 text-bondi-textoSecundario"
                 : "bg-bondi-rojo hover:brightness-110 active:scale-95"
